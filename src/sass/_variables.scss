@@ -1,0 +1,45 @@
+// Units
+
+$unit-xs: 8px;
+$unit-s: 16px;
+$unit-m: 24px;
+$unit-l: 32px;
+$unit-lm: 48px;
+$unit-xl: 64px;
+$unit-xxl: 120px;
+
+// Font
+
+$font-family: "Roboto", sans-serif;
+$font-weight-l: 700;
+$font-weight-m: 400;
+$font-weight-s: 300;
+
+$font-size-l: 32px;
+$font-size-m: 22px;
+$font-size-s: 14px;
+$font-size-xs: 12px;
+$font-size-xxs: 10px;
+
+// Colors
+
+$color-white: #fff;
+$color-gray: #ffffff82;
+$color-black: #000000f0;
+$color-border-red: #ff0000;
+
+$bg-color-red: #b50014;
+$bg-color-dark-red: #a62120;
+$bg-color-footer: #66000b;
+
+// Line height
+
+$line-height-m: 24px;
+$line-height-s: 20px;
+$line-height-xs: 8px;
+
+// Padding
+
+$padding-section: $unit-xxl 0;
+$padding-section-xl: $unit-xl 0;
+$padding-section-l: $unit-l 0;

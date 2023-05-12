@@ -1,0 +1,87 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
+.about {
+	padding: $padding-section;
+
+	@include media-laptop {
+		padding: $padding-section-xl;
+	}
+
+	.about__container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 $unit-xxl;
+
+		@include media-laptop {
+			padding: 0 $unit-l;
+		}
+
+		@include media-tablet {
+			padding: 0;
+			flex-direction: column-reverse;
+			flex-wrap: wrap;
+		}
+	}
+}
+
+.about__content {
+	flex: 0 0 50%;
+	padding-right: $unit-xxl;
+
+	@include media-tablet {
+		margin-top: $unit-xl;
+		padding-right: 0;
+		width: 100%;
+		text-align: center;
+	}
+
+	.about__subtitle {
+		margin-bottom: $unit-l;
+	}
+
+	.about__description {
+		margin-bottom: $unit-xl;
+	}
+
+	.about__wrap {
+		display: flex;
+		align-items: center;
+		gap: $unit-s;
+
+		@include media-tablet {
+			justify-content: center;
+		}
+
+		@include media-small-phone {
+			flex-wrap: wrap;
+		}
+
+		.about__btn {
+			@include btn;
+		}
+	}
+}
+
+.about__wrapper {
+	width: 100%;
+}
+
+.about__imgs--big {
+	margin-bottom: $unit-s;
+}
+
+.about__imgs--small {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: $unit-s;
+
+	.about__img {
+		flex: 1 0 25%;
+		img {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,49 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+.banner {
+	background-color: $color-black;
+	padding: $unit-xs 0;
+
+	.worktime {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		gap: $unit-xs;
+
+		@include media-tablet {
+			flex-wrap: wrap;
+			align-items: flex-end;
+			justify-content: flex-end;
+			flex-direction: column;
+		}
+
+		@include media-phone {
+			font-size: $font-size-xxs;
+		}
+
+		.worktime__info {
+			font-size: $font-size-s;
+			line-height: $line-height-xs;
+
+			@include media-phone {
+				font-size: $font-size-xxs;
+			}
+
+			.worktime__info--weight {
+				font-weight: $font-weight-l;
+			}
+		}
+	}
+}
+
+.worktime__title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 5px;
+
+	.worktime__icon {
+		height: $unit-s;
+		width: $unit-s;
+	}
+}

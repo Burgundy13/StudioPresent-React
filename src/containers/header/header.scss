@@ -1,0 +1,135 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
+.header {
+	background-color: $bg-color-red;
+	position: relative;
+
+	.wrap {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.header__img {
+	position: relative;
+	width: 177px;
+	z-index: 15;
+
+	@include media-phone {
+		width: 96px;
+	}
+
+	img {
+		position: absolute;
+	}
+}
+
+.nav {
+	margin-right: -20px;
+	padding-top: $unit-l;
+
+	@include media-laptop {
+		padding-top: $unit-m;
+		margin-right: 0;
+	}
+	@include media-phone {
+		padding-top: $unit-xs;
+	}
+
+	.nav__list {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include media-laptop {
+			display: block;
+			position: absolute;
+			background-color: $bg-color-red;
+			width: 100%;
+			height: 100vh;
+			top: 66px;
+			right: 0;
+			z-index: 10;
+			padding-top: $unit-m;
+			transform: translateX(100%);
+			transition: 0.3s ease-in;
+
+			.nav__item {
+				padding: $unit-xs;
+				width: 60%;
+				margin: 0 auto;
+
+				&:last-of-type {
+					display: none;
+				}
+				.nav__link {
+					border-bottom: 1px solid $color-white;
+				}
+			}
+		}
+
+		@include media-phone {
+			top: 50px;
+		}
+
+		.nav__link {
+			padding: 8px 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 5px;
+			white-space: nowrap;
+		}
+	}
+}
+
+.icon__pdf {
+	height: 28px;
+	width: $unit-m;
+}
+//Hamburger menu
+
+.nav__menu {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: $unit-xs;
+
+	.nav__menu--link {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 5px;
+		padding: $unit-xs;
+	}
+}
+
+.nav__menu--item,
+.hamburger__menu {
+	display: none;
+
+	@include media-laptop {
+		display: block;
+	}
+}
+
+// .hamburger__menu {
+// 	background-color: transparent;
+// 	border: none;
+// 	color: $color-white;
+
+// 	.bx-menu {
+// 		font-size: $font-size-l;
+// 	}
+// }
+
+.nav__list.show {
+	display: block;
+	transform: translateX(0);
+}
+
+.no-scroll {
+	overflow-y: hidden;
+	height: 100vh;
+}

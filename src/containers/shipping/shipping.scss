@@ -1,0 +1,26 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+.shipping {
+	@include bg-img("../assets/images/shipping-img.png");
+	height: 55vh;
+	background-color: $color-black;
+	.wrap {
+		height: 100%;
+	}
+}
+
+.shipping__content {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	.shipping__title {
+		margin-bottom: $unit-l;
+	}
+
+	.shipping__btn {
+		@include btn;
+	}
+}

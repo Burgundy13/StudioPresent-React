@@ -1,0 +1,12 @@
+export { default as About } from "./about/About";
+export { default as Awards } from "./awards/Awards";
+export { default as Hero } from "./hero/Hero";
+export { default as Banner } from "./banner/Banner";
+export { default as Footer } from "./footer/Footer";
+export { default as Header } from "./header/Header";
+export { default as Copyright } from "./copyright/Copyright";
+export { default as Products } from "./products/Products";
+export { default as Recommendation } from "./recommendation/Recommendation";
+export { default as Reservation } from "./reservation/Reservation";
+export { default as Spices } from "./spices/Spices";
+export { default as Shipping } from "./shipping/Shipping";

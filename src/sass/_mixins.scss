@@ -1,0 +1,44 @@
+// Media  query
+
+@mixin media-laptop {
+	@media screen and (max-width: 1300px) {
+		@content;
+	}
+}
+
+@mixin media-tablet {
+	@media screen and (max-width: 900px) {
+		@content;
+	}
+}
+
+@mixin media-phone {
+	@media screen and (max-width: 550px) {
+		@content;
+	}
+}
+
+@mixin media-small-phone {
+	@media screen and (max-width: 400px) {
+		@content;
+	}
+}
+
+// Elements
+
+@mixin btn {
+	display: inline-block;
+	min-width: 174px;
+	line-height: $line-height-m;
+	padding: $unit-s $unit-l;
+	font-weight: $font-weight-m;
+	border-radius: 40px;
+	text-align: center;
+}
+
+@mixin bg-img($url) {
+	background-image: url($url);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}

@@ -1,0 +1,149 @@
+@import "./mixins";
+@import "./variables";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all 0.3s ease-in-out;
+}
+
+html {
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: $font-family;
+	width: 100%;
+	color: $color-white;
+	background-color: $color-black;
+	overflow-x: hidden;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+h1 {
+	font-size: 38px;
+	font-weight: $font-weight-l;
+	line-height: 45px;
+}
+
+h2 {
+	font-size: $font-size-l;
+	font-weight: $font-weight-l;
+	line-height: 42px;
+}
+
+h3 {
+	font-size: $font-size-m;
+	font-weight: $font-weight-l;
+	line-height: $line-height-m;
+}
+
+p {
+	margin-bottom: $unit-xs;
+	font-weight: $font-weight-s;
+	line-height: $line-height-m;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+.wrap {
+	width: 100%;
+	max-width: 1320px;
+	margin: 0 auto;
+
+	@include media-laptop {
+		padding: 0 $unit-s;
+	}
+}
+
+.btn--primary {
+	background-color: $bg-color-dark-red;
+	border: 1px solid $color-white;
+	transition: background-color 0.3s ease-in-out;
+
+	&:hover {
+		background-color: $color-white;
+		color: $color-black;
+		border: 1px solid $color-border-red;
+	}
+}
+
+.btn--secondary {
+	background-color: $color-white;
+	color: $color-black;
+	border: 1px solid $color-border-red;
+	transition: background-color 0.3s ease-in-out;
+
+	&:hover {
+		background-color: $bg-color-dark-red;
+		color: $color-white;
+		border: 1px solid $color-white;
+	}
+}
+
+[data-theme="light"] {
+	background-color: $color-white;
+
+	.recommendation__slide {
+		opacity: 0.8;
+
+		.slide__img {
+			mix-blend-mode: difference;
+		}
+	}
+
+	.banner {
+		background-color: $color-white;
+		color: $color-black;
+	}
+
+	.about,
+	.products,
+	.awards,
+	.recommendation,
+	.recommendation__subtitle {
+		color: $color-black;
+	}
+
+	.card__text {
+		color: $color-white;
+	}
+
+	.awards__img,
+	.awards__logo,
+	.products__logo {
+		mix-blend-mode: difference;
+	}
+
+	.awards {
+		.card__description {
+			color: $color-black !important ;
+		}
+	}
+
+	.btn--primary {
+		color: $color-white;
+
+		&:hover {
+			color: $color-black;
+		}
+	}
+}
